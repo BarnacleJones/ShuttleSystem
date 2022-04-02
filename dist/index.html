@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben's Shuttle Service</title>
+    
+    
+</head>
+<body>
+    <h1>Ben's Shuttle Booking Service</h1>
+
+    <!-- 
+    <form method="post" action="./index.php">
+  
+        <div id="form_page">
+  
+            <div id="form_body">
+                <div id="head">
+                    <h3 id="heading">BookShuttle</h3>
+                </div>
+                
+                <div id="input_name" class="input">
+                    <label for="name">Booking Name:</label>
+                    <input id="name" type="text" 
+                        Placeholder="Name (First,Last)" name="name" 
+                        required>
+                </div>
+                <div id="input_day" class="input">
+                    <label for="dayPick">Date of Travel:</label>
+                    <input type="date" name="dayPick" required>
+                </div>
+                <div id="input_time" class="input">
+                    <label for="time">Time:</label>
+                    <input id="time" type="time" 
+                        name="timePick" 
+                       required>
+                </div>
+  
+                <div class="id input">
+                    <input id="submit" type="submit" 
+                        name="submit" value="submit"
+                        onclick="get_data()" 
+                        >
+                </div>
+            </div>
+        </div>
+    </form>
+-->
+
+<!-- test form -->
+
+<form name="forms" id="forms">
+    <label>Whats your username?
+      <input name="username" type="text" />
+    </label>
+    <label>How many years have you been a developer?
+      <input name="age" type="number" />
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // get the form element from dom
+    const formElement = document.querySelector('form#forms')
+
+    // convert the form to JSON
+    const getFormJSON = (form) => {
+      const data = new FormData(form);
+      return Array.from(data.keys()).reduce((result, key) => {
+        result[key] = data.get(key);
+        return result;
+      }, {});
+    };
+
+    // handle the form submission event, prevent default form behaviour, check validity, convert form to JSON
+    const handler = (event) => {
+      event.preventDefault();
+      const valid = formElement.reportValidity();
+      if (valid) {
+        const result = getFormJSON(formElement);
+        console.log(result)
+      }
+    }
+
+    formElement.addEventListener("submit", handler)
+  </script>
+
+
+<div></div>
+    <div class="timeArea">
+    <h3>Today's date is: <span id="dateDisplay"> </span></h3>
+    <h3>The time is: <span id="timeDisplay"></span></h3>
+    </div>
+    <script src="main.js" ></script>
+</body>
+</html>
