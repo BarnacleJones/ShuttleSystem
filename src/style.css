@@ -1,3 +1,39 @@
+
+
 body{
-    font-size: 2rem;
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 90vh;
+    text-align: center;
+}
+
+header{
+    grid-area: 1 / 1 / span 1 /span 5;
+    background-color: #101519;
+    color: #00B1B0;
+}
+
+.bookingSection{
+    
+    grid-area: 2 / 1 / span 1 /span 5;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: grey;
+}
+
+/*  */
+.formy{
+    grid-area: 2 / 2 / span 1 / span 3;
+    
+    border: 1px black solid;
+    text-align: start;
+    background-color: #00B1B0;
+    opacity: 0.8;
+}
+
+footer{
+    grid-area: 5 / 1 / span 1 /span 5;
 }
