@@ -1,8 +1,7 @@
 <?php  
-    
 //create an array from the form data
 $datae = array();
-$datae[] = array(
+$datae[] = array(    
     'Name' => $_POST['name'],
     'Day' => $_POST['dayPick'],
     'Time' => $_POST['timePick'],
@@ -28,5 +27,4 @@ echo "
 <h1>Success</h1>
 <button><a href='./index.php'>Back Home</a></button>
 ";
-
 ?>

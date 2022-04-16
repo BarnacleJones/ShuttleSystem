@@ -28,11 +28,13 @@
             echo "                        
             <h2>Name: $key->Name</h2>  
             <p>Day: $key->Day</p>            
-            <p>Time: $key->Time</p>               
+            <p>Time: $key->Time</p>  
+            <button id='removeButton' onclick='removeInstance($key->Name)'>Remove</button>             
             <br>
             ";
             }  
         }
+        
     }    
   ?>
      <main class="bookingSection">

@@ -3,15 +3,22 @@ import './style.css';
 require('normalize.css');
 
 
-//when working
+//Time display
 setInterval(displayDate, 1000);
+
+//Global values for toggling visibility
 let SeeBookingArea = document.getElementById('bookingArea');
 let bookbutton = document.getElementById('toggleButton');
-
-bookbutton.addEventListener("click", showBookings);
-SeeBookingArea.style.display = "none";
 let MakeBookingArea = document.getElementById('formID');
 
+//Event listener
+bookbutton.addEventListener("click", showBookings);
+
+//Initially set display to none for json list
+SeeBookingArea.style.display = "none";
+
+
+//Function to toggle views
 function showBookings()
 {    
     if (MakeBookingArea.style.display == "none") {
@@ -25,6 +32,7 @@ function showBookings()
         MakeBookingArea.style.display = "none";
     }
 }
+
 
 
 
