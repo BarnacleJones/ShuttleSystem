@@ -24,6 +24,9 @@ $jsonData = json_encode($tempArray);
 file_put_contents('BookShuttle.json', $jsonData);
 
 //say success (should include go back button if works)
-echo "Success";
+echo "
+<h1>Success</h1>
+<button><a href='./index.php'>Back Home</a></button>
+";
 
 ?>

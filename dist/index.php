@@ -8,9 +8,10 @@
     
 </head>
 <body>
+<div class="page">
   <header>
     <h1>Ben's Shuttle Booking Service</h1>
-  </header>
+  </header> 
   <?php
   function displayJson()
     {
@@ -24,68 +25,57 @@
             //all in arrays...not sure how to get around that besides this
             foreach ($display as $key) 
             {
-            echo "
-            <div class='bookingsArea'>            
+            echo "                        
             <h2>Name: $key->Name</h2>  
             <p>Day: $key->Day</p>            
             <p>Time: $key->Time</p>               
             <br>
             ";
-            }       
-            
+            }  
         }
-    }
-    displayJson();
+    }    
   ?>
-
      <main class="bookingSection">
-         <!-- Form for getting shuttle information -->
-    <form method="post" action="./script.php" class="formy">
-  
-        <div id="form_page" >
-  
-            <div id="form_body">
-                <div id="head">
+         <!-- Form for getting shuttle information into JSON -->
+        <form method="post" action="./script.php" class="formy" id="formID">
                     <h3 id="heading">Book Shuttle</h3>
-                </div>
-                
-                <div id="input_name" class="input">
-                    <label for="name">Booking Name:</label>
-                    <input id="name" type="text" 
-                        Placeholder="Name (First,Last)" name="name" 
-                        required>
-                </div>
-                <div id="input_day" class="input">
-                    <label for="dayPick">Date of Travel:</label>
-                    <input type="date" name="dayPick" required>
-                </div>
-                <div id="input_time" class="input">
-                    <label for="time">Time:</label>
-                    <input id="time" type="time" 
+                    <div id="input_name" class="input">
+                        <label for="name">Booking Name:</label>
+                        <input id="name" type="text" 
+                            Placeholder="Name (First,Last)" name="name" 
+                            required>
+                    </div>
+                    <div id="input_day" class="input">
+                        <label for="dayPick">Date of Travel:</label>
+                        <input type="date" name="dayPick" required>
+                    </div>
+                    <div id="input_time" class="input">
+                        <label for="time">Time:</label>
+                        <input id="time" type="time" 
                         name="timePick" 
-                       required>
-                </div>
-  
-                <div class="id input">
-                    <input id="submit" type="submit" 
-                        name="submit" value="submit"
-                        
-                        >
-                </div>
-            </div>
-        </div>
-    </form>
-
+                        required>
+                    </div>
     
-
-  </main>
-
-
-
+                    <div class="id input">
+                        <input id="submit" type="submit" 
+                            name="submit" value="submit"                            
+                            >
+                    </div>                
+        </form>
+        </main>
+    <button id="toggleButton">Toggle Bookings/Book</button>
+    <br><br>
+    <div id="bookingArea">
+        <?php
+        displayJson(); 
+        ?>
+    </div>
     <footer class="timeArea">
     <p>Today's date is: <span id="dateDisplay"> </span></p>
     <p>The time is: <span id="timeDisplay"></span></p>
     </footer>
+
+  </div>  
     <script src="main.js" ></script>
 </body>
 </html>

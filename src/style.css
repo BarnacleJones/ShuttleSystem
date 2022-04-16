@@ -3,40 +3,54 @@ Using luxury airport shuttles as my template
 https://www.luxuryairportshuttles.co.nz/
 */
 
-body{
-    
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 90vh;
+body{    
+    display: flex;
+    flex-direction: column;
+    background-color: #00B1B0;
+    height: 100vh;
     text-align: center;
+    align-items: center;
 }
 
 header{
-    grid-area: 1 / 1 / span 1 /span 5;
     background-color: #101519;
     color: #00B1B0;
 }
 
-.bookingSection{
-    
-    grid-area: 2 / 1 / span 1 /span 5;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background-color: grey;
+
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+width: 80vw;
+height: 100vh;
+background-image: url(./shuttle.jpg);
+background-size:cover;
+background-position: center;
+background-repeat: no-repeat;
+gap: 5%;}
+
+
+.bookingSection
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/*  */
-.formy{
-    grid-area: 2 / 2 / span 1 / span 3;
-    
+.formy, #bookingArea, .timeArea{
+    display: flex;
+    flex-direction: column;    
     border: 1px black solid;
-    text-align: start;
+    text-align: center;
     background-color: #00B1B0;
     opacity: 0.8;
+    width:max-content;
+    align-self: center;
+    
 }
 
-footer{
-    grid-area: 5 / 1 / span 1 /span 5;
+#bookingArea{
+    width: 80vw;
 }
