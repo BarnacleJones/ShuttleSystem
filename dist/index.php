@@ -10,9 +10,9 @@
 <body class="page">
 
   <header>
-      <img src="../src/logo.svg" alt="Ben's Shuttle Logo" srcset="" width="15%">
+      <img src="../src/logo.svg" alt="Ben's Shuttle Logo" srcset="" width="20%">
   </header> 
-  <!-- <?php
+  <?php
   function displayJson()
     {
         //decode json file and put it in cars variable
@@ -36,7 +36,7 @@
         }
         
     }    
-  ?> -->
+  ?> 
      <main class="bookingSection">
 
         <div id="greeting">
@@ -45,7 +45,7 @@
             <button class="toggleButton">BOOK A SHUTTLE</button>
         </div>
 
-        <div id="formSection">
+    <div id="formSection">
          <!-- Form for getting shuttle information into JSON -->
         <form method="post" action="./script.php" class="formy" id="formID">
                     <h3 id="heading">Book Shuttle</h3>
@@ -58,23 +58,23 @@
                     <div id="input_day" class="input">
                         <label for="dayPick">Date of Travel:</label>
                         <input type="date" name="dayPick" required>
-                    
+                    </div> <br>
                     <div id="input_time" class="input">
                         <label for="time">Time:</label>
                         <input id="time" type="time" 
                         name="timePick" 
                         required>
-                    </div>
+                    </div><br>
     
                     <div class="id input">
                         <input id="submit" type="submit" 
-                            name="submit" value="submit"                            
+                            name="submit" value="SUBMIT"                            
                             >
-                    </div>                
+                    </div>  <br>              
                             
-    </form> 
-    <button class="toggleButton">VIEW BOOKINGS</button>
-</div>
+        </form> 
+        <button class="toggleButton">VIEW BOOKINGS</button>
+    </div>
 
 <div id="bookingArea">
     <?php
