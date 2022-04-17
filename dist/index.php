@@ -7,12 +7,12 @@
     <title>Ben's Shuttle Service</title>   
     
 </head>
-<body>
-<div class="page">
+<body class="page">
+
   <header>
-    <h1>Ben's Shuttle Booking Service</h1>
+      <img src="../src/logo.svg" alt="Ben's Shuttle Logo" srcset="" width="15%">
   </header> 
-  <?php
+  <!-- <?php
   function displayJson()
     {
         //decode json file and put it in cars variable
@@ -36,8 +36,16 @@
         }
         
     }    
-  ?>
+  ?> -->
      <main class="bookingSection">
+
+        <div id="greeting">
+            <h1>Airport Shuttles and City Transfers</h1>
+            <p>Delivering you safely and professionally, anywhere you need to be.</p>
+            <button class="toggleButton">BOOK A SHUTTLE</button>
+        </div>
+
+        <div id="formSection">
          <!-- Form for getting shuttle information into JSON -->
         <form method="post" action="./script.php" class="formy" id="formID">
                     <h3 id="heading">Book Shuttle</h3>
@@ -46,11 +54,11 @@
                         <input id="name" type="text" 
                             Placeholder="Name (First,Last)" name="name" 
                             required>
-                    </div>
+                    </div><br>
                     <div id="input_day" class="input">
                         <label for="dayPick">Date of Travel:</label>
                         <input type="date" name="dayPick" required>
-                    </div>
+                    
                     <div id="input_time" class="input">
                         <label for="time">Time:</label>
                         <input id="time" type="time" 
@@ -63,21 +71,37 @@
                             name="submit" value="submit"                            
                             >
                     </div>                
-        </form>
-        </main>
-    <button id="toggleButton">Toggle Bookings/Book</button>
+                            
+    </form> 
+    <button class="toggleButton">VIEW BOOKINGS</button>
+</div>
+
+<div id="bookingArea">
+    <?php
+    displayJson(); 
+    ?>
+    <button class="toggleButton">HOME</button>
+</div>
+
+    </main>
+
+    
+
+
+
+    </main>
+    
     <br><br>
-    <div id="bookingArea">
-        <?php
-        displayJson(); 
-        ?>
-    </div>
+    
+    
+    
+    
     <footer class="timeArea">
-    <p>Today's date is: <span id="dateDisplay"> </span></p>
-    <p>The time is: <span id="timeDisplay"></span></p>
+        <p><span id="dateDisplay"> </span></p>
+        <p><span id="timeDisplay"></span></p>
     </footer>
 
-  </div>  
+   
     <script src="main.js" ></script>
 </body>
 </html>
