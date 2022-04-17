@@ -15,7 +15,7 @@
   <?php
   function displayJson()
     {
-        //decode json file and put it in cars variable
+        //decode json file and put it in files variable
         $files = json_decode(file_get_contents("BookShuttle.json"));
         //loop through all the variables and display in html
         
@@ -25,17 +25,44 @@
             //all in arrays...not sure how to get around that besides this
             foreach ($display as $key) 
             {
-            echo "                        
+            echo "   
+            <div id='bookings'>                     
             <h2>Name: $key->Name</h2>  
             <p>Day: $key->Day</p>            
             <p>Time: $key->Time</p>  
-            <button id='removeButton' onclick='removeInstance($key->Name)'>Remove</button>             
+            <button class='removeButton' id='$key->Name'>Remove</button>             
             <br>
+            </div>
             ";
             }  
         }
         
-    }    
+    }   
+    
+//     function removeInstance($name)
+// {
+    
+// //get the contents of the json
+// $jsonName = file_get_contents('BookShuttle.json');
+
+// //decode them, put them in an array
+// $tempArray = json_decode($jsonName);
+// //make new array
+// $newArray = [];
+// //take out the named index from the arrray
+// foreach ($tempArray as $key) {
+//     if ($key == $name) {
+//         # code...
+//        $tempArray.array_splice($tempArray, $key,$key+1, $newArray);
+//     };
+// }
+// //json encode the tempArray
+// $jsonData = json_encode($newArray);
+
+// //put all contents into the json
+// file_put_contents('BookShuttle.json', $jsonData);
+// }
+ 
   ?> 
      <main class="bookingSection">
 
