@@ -4,53 +4,120 @@ https://www.luxuryairportshuttles.co.nz/
 */
 
 body{    
-    display: flex;
-    flex-direction: column;
-    background-color: #00B1B0;
-    height: 100vh;
-    text-align: center;
-    align-items: center;
-}
+height: 100vh;
+} 
 
 header{
-    background-color: #101519;
-    color: #00B1B0;
+width: 100%;
+font-size: 1rem;
+margin: 0;
+display: flex;
+flex-direction: row;
+align-items:baseline;
+background-color: #101519;
+color: #00B1B0;
+height: 25%;
+opacity: 0.9;
 }
 
-
-
 .page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-width: 80vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100vw;
 height: 100vh;
+font-family: Arial, Helvetica, sans-serif;
+color: rgb(244, 250, 250);
 background-image: url(./shuttle.jpg);
 background-size:cover;
 background-position: center;
 background-repeat: no-repeat;
-gap: 5%;}
-
-
-.bookingSection
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+gap: 5%;
 }
 
-.formy, #bookingArea, .timeArea{
-    display: flex;
-    flex-direction: column;    
-    border: 1px black solid;
-    text-align: center;
-    background-color: #00B1B0;
-    opacity: 0.8;
-    width:max-content;
-    align-self: center;
-    
+#formSection, #bookingArea, #greeting {
+display: flex;
+flex-direction: column;    
+border-radius: 10px;
+text-align: center;
+background: rgba(16, 21, 25, 0.6);
+width:80vw;
+height: 70vh;
+align-self: center;
+margin: auto auto;
+color:rgb(0, 177, 176);    
+}
+
+#greeting{
+    font-size: 1rem;
 }
 
 #bookingArea{
-    width: 40vw;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 5%;
+border-radius: 10px;
+text-align: center;
+background: rgba(16, 21, 25, 0.6);
+width:80vw;
+height: 70vh;
+align-self: center;
+margin: auto auto;
+color:rgb(0, 177, 176);   
 }
+
+.toggleButton, .removeButton {
+width:min-content;
+align-self: center;
+margin-top: auto;
+background-color: rgb(16, 21, 25); 
+border: none;
+color:#00B1B0;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+margin-bottom: 5%; 
+transition-duration: 0.4s;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+background-color: #101519;
+border: none;
+color:#00B1B0;
+padding: 8px 16px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+
+input {
+background-color: #101519;
+color: white;
+border: none;
+box-sizing: border-box;
+}
+
+.toggleButton:hover, .removeButton:hover {
+background-color: #165A3F; 
+color: white;
+}
+
+.timeArea{
+display: flex;
+flex-direction: row;
+text-align: center;
+gap:2%;
+background-color: #101519;
+opacity: 0.9;
+color: #165A3F;
+width: 100vw;
+margin: 0;
+margin-top: auto;
+}
+
+
+#bookingArea{
+margin-top: auto;
+}
+
